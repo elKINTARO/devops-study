@@ -1,23 +1,23 @@
-pipeline {
-  agent any
+pipeline {                     
+    agent any  // run on any available agent
 
-  stages {
-    stage('Build') {
-      steps {
-        sh 'echo Building Project'
-      }
-    }
+    stages {
+        stage('Build') {  // build stage
+            steps {
+                sh 'echo Building Project'
+            }
+        }
 
-    stage('Test') {
-      steps {
-        sh 'echo Running Tests'
-      }
-    }
+        stage('Test') {  // test stage
+            steps {
+                sh 'echo Running Tests'
+            }
+        }
 
-    stage('Deploy') {
-      steps {
-        sh 'echo Deploying Application'
-      }
+        stage('Deploy') {  // deploy stage
+            steps {
+                sh 'echo Deploying Application'
+            }
+        }
     }
-  }
 }
